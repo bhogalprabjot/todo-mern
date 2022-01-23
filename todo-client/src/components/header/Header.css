@@ -1,0 +1,31 @@
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+.header{
+    background-color: #BC6FF1;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    width: 100%;
+}
+.nav{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.logo{
+    font-size: 1.5em;
+    color: black;
+}
+
+.nav-items{
+    display: flex;
+}
+.nav-items div{
+    margin-right: 10px;
+    cursor: pointer;
+}

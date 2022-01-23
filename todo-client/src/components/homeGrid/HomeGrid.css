@@ -1,0 +1,20 @@
+.homeGrid{
+    /* border: 2px solid black; */
+
+    border-radius: 10px;
+    background-color: #e3c5f7;
+    margin:10px;
+    padding: 0px 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homeGrid:hover{
+    background-color: #BC6FF1;
+    transition: 100ms;
+}
+.deleteBtn{
+    cursor: pointer;
+    color: maroon;
+}

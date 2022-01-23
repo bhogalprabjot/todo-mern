@@ -1,0 +1,115 @@
+.newList{
+    margin-top:5em;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+   
+}
+
+/* .fixedTop{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    padding-bottom: 50px;
+    overflow: hidden;
+    top:0;
+    width: 69%;
+    margin-top: 47px;
+    padding-top: 40px;
+    position: fixed;
+} */
+
+.btnRow{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.NewList__Btn{
+    font-size: 20px;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    padding: 8px;
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+.title{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.NewList__tickBtn{
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.NewList__editBtn{
+    margin-left: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.titleText{
+    width: 95%;
+    font-size: 40px;
+}
+
+
+.taskInput{
+    width: 100%;
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+}
+.taskText{
+    width: 95%;
+    font-size: 20px;
+}
+.NewList__addBtn{
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.taskList{
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.taskList-item{
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+.taskList-item-text{
+    font-size: 18px;
+}
+.taskList-item-btns{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.taskList-item-btn{
+    cursor: pointer;;
+    margin-left: 15px;
+}
