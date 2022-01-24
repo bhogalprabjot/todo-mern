@@ -1,4 +1,4 @@
-.newList{
+/* .newList{
     margin-top:5em;
     margin-left: 10%;
     margin-right:10%;
@@ -12,19 +12,6 @@
    
 }
 
-/* .fixedTop{
-    padding: 10px;
-    border-bottom: 1px solid black;
-    background-color: white;
-    padding-bottom: 50px;
-    overflow: hidden;
-    top:0;
-    width: 69%;
-    margin-top: 47px;
-    padding-top: 40px;
-    position: fixed;
-} */
-
 .btnRow{
     display: flex;
     align-items: center;
@@ -35,7 +22,7 @@
 .NewList__Btn{
     font-size: 20px;
     border-radius: 10px;
-    /* border: 1px solid black; */
+     border: 1px solid black; 
     padding: 8px;
     cursor: pointer;
     background-color: lightgreen;
@@ -100,25 +87,7 @@
 
     
 }
-.taskList-item-complete{
-    cursor: pointer;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;    
-}
-.taskList-item-complete:before{
-    content:"";
-    position: absolute;
-    top:50%;
-    left: 10;
-    border-bottom: 2px solid black;
-    width: 95%;
-}
+
 
 .taskList-item-text{
     font-size: 18px;
@@ -132,4 +101,4 @@
 .taskList-item-btn{
     cursor: pointer;;
     margin-left: 15px;
-}
+} */

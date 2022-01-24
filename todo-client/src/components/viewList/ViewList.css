@@ -10,14 +10,52 @@
     align-items: center;
     border-radius: 10px;
    
+}.taskList-item-complete{
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+}
+.taskList-item-complete:before{
+    content:"";
+    position: absolute;
+    top:50%;
+    left: 10;
+    border-bottom: 2px solid black;
+    width: 90%;
+}
+.taskList-top-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+.backBtn{
+    margin-left: 10px;
+    font-size: 30px;
 }
 
+.saveBtn{
+    cursor: pointer;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
 
 .title{
     width: 100%;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .viewList__tickBtn{
     margin-left: 20px;
@@ -35,6 +73,8 @@
     width: 95%;
     font-size: 40px;
 }
+
+
 
 
 .taskInput{
@@ -61,7 +101,7 @@
 }
 
 .taskList-item{
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-top: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -73,6 +113,8 @@
     
 }
 .taskList-item-text{
+    width: 100%;
+    cursor: pointer;
     font-size: 18px;
 }
 .taskList-item-btns{

@@ -18,7 +18,7 @@ const Home = () => {
     }, [dispatch]);
 
     const addNewList = () =>{
-        navigate('/list')
+        navigate('/list/new')
     }
 
     return (

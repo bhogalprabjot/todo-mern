@@ -10,99 +10,6 @@
   ],
   "lists": [
     {
-      "id": "1",
-      "userId": "1",
-      "title": "List 1",
-      "tasks": [
-        {
-          "id": "1",
-          "title": "task1",
-          "description": "This is task 1",
-          "isComplete": false
-        },
-        {
-          "id": "2",
-          "title": "task2",
-          "description": "This is task 2",
-          "isComplete": false
-        },
-        {
-          "id": "3",
-          "title": "task3",
-          "description": "This is task 3",
-          "isComplete": false
-        },
-        {
-          "id": "4",
-          "title": "task4",
-          "description": "This is task 4",
-          "isComplete": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "userId": "1",
-      "title": "List 2",
-      "tasks": [
-        {
-          "id": "1",
-          "title": "task1",
-          "description": "This is task 1",
-          "isComplete": false
-        },
-        {
-          "id": "2",
-          "title": "task2",
-          "description": "This is task 2",
-          "isComplete": false
-        },
-        {
-          "id": "3",
-          "title": "task3",
-          "description": "This is task 3",
-          "isComplete": false
-        },
-        {
-          "id": "4",
-          "title": "task4",
-          "description": "This is task 4",
-          "isComplete": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "userId": "1",
-      "title": "List 3",
-      "tasks": [
-        {
-          "id": "1",
-          "title": "task1",
-          "description": "This is task 1",
-          "isComplete": false
-        },
-        {
-          "id": "2",
-          "title": "task2",
-          "description": "This is task 2",
-          "isComplete": false
-        },
-        {
-          "id": "3",
-          "title": "task3",
-          "description": "This is task 3",
-          "isComplete": false
-        },
-        {
-          "id": "4",
-          "title": "task4",
-          "description": "This is task 4",
-          "isComplete": false
-        }
-      ]
-    },
-    {
       "id": "4",
       "userId": "1",
       "title": "List 4",
@@ -170,6 +77,12 @@
       "title": "List 6",
       "tasks": [
         {
+          "id": "3",
+          "title": "task3",
+          "description": "This is task 3",
+          "isComplete": false
+        },
+        {
           "id": "1",
           "title": "task1",
           "description": "This is task 1",
@@ -179,12 +92,6 @@
           "id": "2",
           "title": "task2",
           "description": "This is task 2",
-          "isComplete": false
-        },
-        {
-          "id": "3",
-          "title": "task3",
-          "description": "This is task 3",
           "isComplete": false
         },
         {
@@ -409,28 +316,15 @@
       "userId": 1
     },
     {
-      "title": "list 16",
+      "title": "bottom",
       "tasks": [
         {
-          "id": "ed10df79-9b0e-4dbe-9829-badb7feb9da4",
-          "title": "task 1",
+          "id": "1d6c0973-6768-47f9-91a7-d22a905708fc",
+          "title": "asca",
           "isComplete": false
         }
       ],
-      "id": 16,
-      "userId": 1
-    },
-    {
-      "title": "new list",
-      "tasks": [
-        {
-          "id": "7c83949c-f60e-4d62-bf31-518440de487f",
-          "title": "rasd",
-          "isComplete": false
-        }
-      ],
-      "id": 17,
-      "userId": 1
+      "id": "369ceb26-b767-4911-8d08-b90170bdc1fc"
     }
   ]
 }

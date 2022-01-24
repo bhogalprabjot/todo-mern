@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home/>} />
-          <Route exact path="/list" element={<NewList/>}/>
+          {/* <Route exact path="/list" element={<NewList/>}/> */}
           <Route exact path ="/list/:id" element={<ViewList/>}/>
         </Routes>
       </BrowserRouter>
