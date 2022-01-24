@@ -30,6 +30,29 @@ const ViewList = () => {
     }, [])
 
 
+    const toggleComplete = (taskId) => {
+        // const updatedTasks = list.tasks.map(task => task.id == taskId ? { ...task, isComplete: !task.isComplete } : task);
+        const updatedTasks = [];
+        let completedTask;
+        for (let i = 0; i < list.tasks.length; i++) {
+            if (list.tasks[i].id == taskId) {
+                completedTask = list.tasks[i];
+                completedTask.isComplete = !list.tasks[i].isComplete;
+            } else {
+                updatedTasks.push(list.tasks[i]);
+            }
+        }
+        if(completedTask.isComplete)
+            updatedTasks.push(completedTask);
+        else
+            updatedTasks.unshift(completedTask);
+
+        addList({ ...list, tasks: [...updatedTasks] });
+
+        console.log("Task Complete", taskId);
+
+    }
+
 
     return (
         <div className='ViewList'>
@@ -40,11 +63,18 @@ const ViewList = () => {
                 {
                     list.tasks.map((task) => {
                         return (
-                            <div key={task.id} className='taskList-item'>
-                                <div className='taskList-item-text'>
-                                    {task.title}
+                            !task.isComplete ?
+                                <div key={task.id} className='taskList-item' onClick={() => toggleComplete(task.id)}>
+                                    <div className='taskList-item-text'>
+                                        {task.title}
+                                    </div>
                                 </div>
-                            </div>
+                                :
+                                <div key={task.id} className='taskList-item-complete' onClick={() => toggleComplete(task.id)}>
+                                    <div className='taskList-item-text'>
+                                        {task.title}
+                                    </div>
+                                </div>
                         )
                     })
                 }
