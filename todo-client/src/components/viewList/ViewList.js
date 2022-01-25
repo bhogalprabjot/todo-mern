@@ -111,7 +111,7 @@ const ViewList = () => {
                 updatedTasks.push(list.tasks[i]);
             }
         }
-        if (completedTask.isComplete1)
+        if (completedTask.isComplete)
             updatedTasks.push(completedTask);
         else
             updatedTasks.unshift(completedTask);
