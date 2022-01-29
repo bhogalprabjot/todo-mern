@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { MdKeyboardBackspace, MdAddCircle } from 'react-icons/md';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { VscCheck, VscEdit } from 'react-icons/vsc';
@@ -12,19 +12,27 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const ViewList = () => {
+    // const lists = useSelector(state=>state.lists);
+    
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
     console.log("This is list ", id);
 
 
+    // const [list, addList] = useState(
+    //     // {
+    //     //     title: "",
+    //     //     tasks: []
+    //     // }
+    //     lists.find((list)=>list.id == id)
+    // );
     const [list, addList] = useState(
         {
             title: "",
             tasks: []
         }
     );
-
     const [newTask, setNewTask] = useState(
         {
             id: "",

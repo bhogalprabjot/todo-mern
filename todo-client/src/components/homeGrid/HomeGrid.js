@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import ListTile from '../listTile/ListTile';
+
 import './HomeGrid.css';
 import { useNavigate } from "react-router-dom";
 
@@ -11,22 +11,13 @@ import { deleteList } from '../../actions/lists';
 const HomeGrid = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    // const states = useSelector((state) => state);
-    // console.log("This is the store", states);
-    const stateLists = useSelector((state) => state.lists);
-    console.log("this is home grid", stateLists);
-    const [lists, addList] = useState([]);
+    const lists = useSelector((state) => state.lists);
 
-    useEffect(()=>{
-        console.log("This is home grid useEffect");
-        addList([...stateLists]);
-    },[stateLists])
-
-    const viewList = (id) =>{
+    const viewList = (id) => {
         navigate(`/list/${id}`)
     }
 
-    const removeList = (listId) =>{
+    const removeList = (listId) => {
         dispatch(deleteList(listId))
         // addList([...lists.filter(list => list.id!=listId)]);
         console.log("delete list", listId);
@@ -42,11 +33,11 @@ const HomeGrid = () => {
                     lists.map((list) => {
                         // console.log(list.title)
                         return (
-                            <div key={list.id} className='homeGrid' >
-                                <div className='homeGrid__title' onClick={()=>viewList(list.id)}>
+                            <div key={list._id} className='homeGrid' >
+                                <div className='homeGrid__title' onClick={() => viewList(list._id)}>
                                     {list.title}
                                 </div>
-                                <div className='deleteBtn' onClick={()=>removeList(list.id)}>
+                                <div className='deleteBtn' onClick={() => removeList(list._id)}>
                                     <RiDeleteBin6Line />
                                 </div>
                             </div>
