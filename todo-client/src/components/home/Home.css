@@ -22,8 +22,6 @@
     cursor: pointer;
 }
 .addBtn:hover{
-    /* transform: rotate(30deg);
-    transition: 250ms; */
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 

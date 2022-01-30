@@ -1,0 +1,65 @@
+.signup{
+    margin-top:5em;
+    margin-left: 30%;
+    margin-right:30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.signup__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.signup__form__ip{
+    margin: 10px;
+    width: 100%;
+}
+.signup__form__ip input{
+    font-size: 18px;
+}
+.signup__form__sp{
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.signup_btns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.signup__btns__ip{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.signup__btns__ip:hover{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:10px 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #BC6FF1;
+    transition: 250ms;
+}
+.signup__btns__ip span{
+    font-size: 18px;
+    margin-left: 10px
+}
+.signup__link{
+    text-align: right;
+    padding: 10px;   
+    font-size: 18px;
+}

@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 
   
 const Home = () => {
+    console.log(JSON.parse(localStorage.getItem('profile')))
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(() => {

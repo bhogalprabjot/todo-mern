@@ -17,7 +17,7 @@
 }
 .homeGrid:hover{
     background-color: #BC6FF1;
-    transition: 100ms;
+    transition: 250ms;
 }
 .deleteBtn{
     cursor: pointer;
