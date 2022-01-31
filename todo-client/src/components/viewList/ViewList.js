@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { MdKeyboardBackspace, MdAddCircle } from 'react-icons/md';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { VscCheck, VscEdit } from 'react-icons/vsc';
@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const ViewList = () => {
     // const lists = useSelector(state=>state.lists);
-    
+
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -48,7 +48,7 @@ const ViewList = () => {
                 const { data } = await api.getListFromID(id);
                 console.log("this is viewList", data)
                 addList({ ...data });
-                // console.log("this is ViewList", list);
+                console.log("this is ViewList", list);
             }
 
         } catch (err) {
@@ -146,7 +146,7 @@ const ViewList = () => {
 
     const save = () => {
         if (id == 'new')
-            dispatch(addNewList(list,navigate));
+            dispatch(addNewList(list, navigate, JSON.parse(localStorage.getItem('profile'))?.result._id));
         else
             dispatch(updateList(list, id));
 

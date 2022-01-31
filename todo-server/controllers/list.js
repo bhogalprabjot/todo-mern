@@ -3,14 +3,15 @@ import mongoose from 'mongoose';
 
 // get List by user ID (change it when user is added)
 export const getListsByUserID = async (req, res) => {
+    const { userId } = req.params;
     try {
-        const lists = await List.find().sort(
+        const lists = await List.find({ 'userId': userId }).sort(
             { updatedAt: 'desc' }
         ).exec();
         res.status(200).json(lists);
     }
     catch (err) {
-        res.status(404).json({ message: error.message });
+        res.status(404).json({ message: err.message });
     }
 }
 
@@ -19,8 +20,10 @@ export const getListsByUserID = async (req, res) => {
 
 export const getListByID = async (req, res) => {
     const { id } = req.params;
+    // console.log(id);
     try {
         const list = await List.findById(id);
+        // console.log(list)
         res.status(200).json(list);
     } catch (err) {
         res.status(404).json({ message: err.message });
@@ -29,8 +32,8 @@ export const getListByID = async (req, res) => {
 
 // add List
 export const addList = async (req, res) => {
-    const { userID, title, tasks } = req.body;
-    const newList = new List({ userID, title, tasks });
+    const { userId, title, tasks } = req.body;
+    const newList = new List({ userId, title, tasks });
 
     try {
         await newList.save();

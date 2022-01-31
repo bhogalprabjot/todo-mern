@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const listSchema = mongoose.Schema(
     {
-        userID: String,
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
         title: String,
         tasks: [
             {

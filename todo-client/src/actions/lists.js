@@ -2,9 +2,10 @@ import * as api from '../api/index';
 import { v4 as uuidv4 } from 'uuid';
 
 
-export const getLists = () => async (dispatch) => {
+// console.log("this is action", userID);
+export const getLists = (userID) => async (dispatch) => {
     try {
-        const { data } = await api.fetchLists();
+        const { data } = await api.fetchLists(userID);
         console.log("this is action creator", data)
         dispatch({ type: "FETCH_ALL", payload: data });
 
@@ -13,13 +14,13 @@ export const getLists = () => async (dispatch) => {
     }
 }
 
-export const addNewList = (newList, navigate) => async (dispatch) => {
+export const addNewList = (newList, navigate, userID) => async (dispatch) => {
     try {
-        const lists = await api.fetchLists();
-        newList = { ...newList, id: uuidv4(), userId: 1 };
-        // console.log("this is action creator", newList);
+        const lists = await api.fetchLists(userID);
+        newList = { ...newList, id: uuidv4(), userId: userID };
+        console.log("this is action creator", newList);
         const { data } = await api.addList(newList);
-        // console.log("this is action creator", data);
+        console.log("this is action creator data", data);
         dispatch({ type: "ADD_NEW_LIST", payload: data });
         navigate(`/list/${newList.id}`);
 

@@ -5,21 +5,22 @@ import HomeGrid from '../homeGrid/HomeGrid';
 import './Home.css';
 
 import { RiAddCircleFill } from 'react-icons/ri';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
-  
+
 const Home = () => {
-    console.log(JSON.parse(localStorage.getItem('profile')))
-
+    // const location = useLocation();
+    // const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile'))?.result);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     useEffect(() => {
         console.log("this is in home");
-        dispatch(getLists());
-    }, [dispatch]);
+        dispatch(getLists(JSON.parse(localStorage.getItem('profile'))?.result._id));
+    }, []);
 
-    const addNewList = () =>{
+    const addNewList = () => {
         navigate('/list/new')
     }
 
@@ -28,7 +29,7 @@ const Home = () => {
             <div className='home'>
                 <HomeGrid />
             </div>
-            <RiAddCircleFill className='addBtn' onClick={addNewList}/>
+            <RiAddCircleFill className='addBtn' onClick={addNewList} />
         </>
     );
 };

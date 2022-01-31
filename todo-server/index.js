@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import listRouter from './routes/todo.js';
+import userRouter from './routes/user.js';
+
 
 // initialize express app
 const app = express();
@@ -14,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // add routes
 app.use('/list',listRouter);
-
+app.use('/user', userRouter);
 var CONNECTION_URL = 'mongodb://127.0.0.1:27017/todo';
 
 

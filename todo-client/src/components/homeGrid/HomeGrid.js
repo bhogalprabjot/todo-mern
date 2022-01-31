@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { getLists } from '../../actions/lists';
 
 import './HomeGrid.css';
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,12 @@ const HomeGrid = () => {
         navigate(`/list/${id}`)
     }
 
+    // useEffect(() => {
+    //     console.log("this is in home");
+    //     dispatch(getLists());
+    // }, []);
+
+    
     const removeList = (listId) => {
         dispatch(deleteList(listId))
         // addList([...lists.filter(list => list.id!=listId)]);

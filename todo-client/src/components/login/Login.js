@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { GoogleLogin } from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../../actions/auth';
 const Login = () => {
 
     const [showPass, setShowPass] = useState(false);
@@ -18,16 +19,20 @@ const Login = () => {
     )
 
     const handleChange = (event) => {
-        if (event.target.name == 'email')
-            setUser({ ...user, email: event.target.value });
-        else
-            setUser({ ...user, password: event.target.value });
-        // console.log(user)
+        // if (event.target.name == 'email')
+        //     setUser({ ...user, email: event.target.value });
+        // else
+        //     setUser({ ...user, password: event.target.value });
+        setUser({...user, [event.target.name]:event.target.value});
+        console.log(user)
     }
 
     const handleSubmit = () => {
-        diaspatch({ type: 'LOGIN', data: { user } });
-        navigate('/');
+        // diaspatch({ type: 'LOGIN', data: { user } });
+        // navigate('/');
+
+        diaspatch(login(user, navigate));
+
         // console.log(user);
     }
     // const googleSuccess = (res)=>{

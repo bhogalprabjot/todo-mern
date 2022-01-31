@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
-const SignUp = () => {
-    console.log("This is signup");
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signup } from '../../actions/auth';
 
+const SignUp = () => {
+    // console.log("This is signup");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [showPass, setShowPass] = useState(false);
 
     const [user, setUser] = useState(
@@ -13,29 +17,37 @@ const SignUp = () => {
             'firstName': '',
             'lastName': '',
             'email': '',
-            'password': ''
+            'password': '',
+            'confirmPassword': ''
         }
     )
 
     const handleChange = (event) => {
-        switch (event.target.name) {
-            case 'firstName':
-                setUser({ ...user, firstName: event.target.value });
-                break;
-            case 'lastName':
-                setUser({ ...user, lastName: event.target.value });
-                break;
-            case 'email':
-                setUser({ ...user, email: event.target.value });
-                break;
-            case 'password':
-                setUser({ ...user, password: event.target.value });
-                break;
-        }
-        console.log(user)
+        // switch (event.target.name) {
+        //     case 'firstName':
+        //         setUser({ ...user, firstName: event.target.value });
+        //         break;
+        //     case 'lastName':
+        //         setUser({ ...user, lastName: event.target.value });
+        //         break;
+        //     case 'email':
+        //         setUser({ ...user, email: event.target.value });
+        //         break;
+        //     case 'password':
+        //         setUser({ ...user, password: event.target.value });
+        //         break;
+        //     case 'confirmPassword':
+        //         setUser({ ...user, confirmPassword: event.target.value });
+        //         break;
+        // }
+        setUser({ ...user, [event.target.name]: event.target.value });
+        // console.log(user)
     }
 
     const handleSubmit = () => {
+
+        // add form validation
+        dispatch(signup(user, navigate));
         console.log(user);
     }
     return (
@@ -61,6 +73,15 @@ const SignUp = () => {
                         </div> :
                         <div className='signup__form__ip'>
                             <input type="password" name="password" placeholder='Password' value={user.password} onChange={handleChange} />
+                        </div>
+                }
+                {
+                    showPass ?
+                        <div className='signup__form__ip'>
+                            <input type="text" name="confirmPassword" placeholder='Confirm Password' value={user.confirmPassword} onChange={handleChange} />
+                        </div> :
+                        <div className='signup__form__ip'>
+                            <input type="password" name="confirmPassword" placeholder='Confirm Password' value={user.confirmPassword} onChange={handleChange} />
                         </div>
                 }
                 <div className='signup__form__sp'>
