@@ -20,9 +20,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path='/' element={<Login />} />
           <Route exact path='/signup' element={<SignUp />} />
-          <Route exact path='/login' element={<Login />} />
+          <Route exact path="/home" element={<Home />} />
           {/* <Route exact path="/list" element={<NewList/>}/> */}
           <Route exact path="/list/:id" element={<ViewList />} />
         </Routes>

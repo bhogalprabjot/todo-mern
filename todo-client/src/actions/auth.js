@@ -6,7 +6,7 @@ export const login = (user, navigate) => async (dispatch) => {
         // login
         const { data } = await api.login(user);
         dispatch({ type: 'AUTH', data });
-        navigate('/');
+        navigate('/home');
 
     } catch (err) {
         console.log(err.message);
@@ -18,7 +18,7 @@ export const signup = (user, navigate) => async (dispatch) => {
         const { data } = await api.signup(user);
         console.log(data);
         dispatch({ type: 'AUTH', data });
-        navigate('/');
+        navigate('/home');
 
     } catch (err) {
         console.log(err.message);
