@@ -4,7 +4,7 @@
     margin-right:30%;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    background-color: #BC6FF1;
+    background-color: var(--color-accent);
     transition: 250ms;
 }
 .login__btns__ip span{

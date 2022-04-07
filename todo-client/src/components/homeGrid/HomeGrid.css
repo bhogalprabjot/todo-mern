@@ -5,6 +5,7 @@
 
 }
 .homeGrid{
+    /* background-color: transparent; */
     border: 2px solid black;
     border-radius: 10px;
     margin:10px;
@@ -16,7 +17,7 @@
     justify-content: space-between;
 }
 .homeGrid:hover{
-    background-color: #BC6FF1;
+    background-color: var(--color-accent);
     transition: 250ms;
 }
 .deleteBtn{
