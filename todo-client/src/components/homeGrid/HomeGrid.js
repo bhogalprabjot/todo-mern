@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getLists } from '../../actions/lists';
-
+import { connect } from 'react-redux';
 import './HomeGrid.css';
 import { useNavigate } from "react-router-dom";
 
@@ -55,7 +55,7 @@ const HomeGrid = () => {
     );
 };
 
-export default HomeGrid;
+export default connect()(HomeGrid);
 
 {/* below line gives error and keeps the home screen re-rendering infinitely*/ }
 {/* <ListTile title={list.title}/> */ }

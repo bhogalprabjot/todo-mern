@@ -17,7 +17,11 @@
     right: 0px;
     margin: 30px; 
     font-size: 50px;
-    color: var(--color-accent);
+
+    color: #9214e6;
+
+/*     color: var(--color-accent); */
+
     background-color: transparent;
     cursor: pointer;
 }

@@ -3,7 +3,11 @@ a, a:visited, a:hover, a:active {
     color: inherit;
   }
 .header{
-    background-color: var(--color-accent);
+
+    background-color: #9214e6;
+
+/*     background-color: var(--color-accent); */
+
     position: fixed;
     overflow: hidden;
     top:0;
@@ -14,7 +18,7 @@ a, a:visited, a:hover, a:active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
 }
 
 .logo{
@@ -26,6 +30,6 @@ a, a:visited, a:hover, a:active {
     display: flex;
 }
 .nav-items div{
-    margin-right: 10px;
+    margin-right: 20px;
     cursor: pointer;
 }

@@ -1,12 +1,28 @@
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Grape+Nuts&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Grape+Nuts&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  margin: 0;
+
+  background-color:#222831;
+  /* font-family: 'Josefin Sans', cursive; */
+  /* font-family: 'Grape Nuts', cursive; */
+  /* font-weight: bold; */
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
   /* background-color: #B9FFFC; */
   /* background-image: url("../public/bg-image.jpg"); */
   
 
-}
+/* } */
 
-:root{
+/* :root{
   /* --color-bg: #a3d8f4; */
   /* --color-bg:rgba(163,74,117,0.2); */
   /* --color-bg: rgba(163, 216, 244, 0.8); */
@@ -14,6 +30,7 @@ body {
   --color-accent: rgba(46, 52, 236, 0.8);
   /* --color-accent:rgb(48,27,96); */
   /* color: white; */
-}
+/* } */
 /* https://colorhunt.co/palette/7579e79ab3f5a3d8f4b9fffc */
+
 
