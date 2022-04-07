@@ -16,7 +16,7 @@
     justify-content: space-between;
 }
 .homeGrid:hover{
-    background-color: #BC6FF1;
+    background-color: #9214e6;
     transition: 250ms;
 }
 .deleteBtn{
