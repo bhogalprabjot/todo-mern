@@ -4,13 +4,15 @@
     margin-right:10%;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    
    
-}.taskList-item-complete{
+}
+.taskList-item-complete{
     cursor: pointer;
     margin-top: 10px;
     border: 1px solid black;
@@ -86,6 +88,8 @@
 .taskText{
     width: 95%;
     font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
 }
 .viewList__addBtn{
     margin-left: 20px;

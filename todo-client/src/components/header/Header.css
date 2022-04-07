@@ -3,7 +3,11 @@ a, a:visited, a:hover, a:active {
     color: inherit;
   }
 .header{
+
     background-color: #9214e6;
+
+/*     background-color: var(--color-accent); */
+
     position: fixed;
     overflow: hidden;
     top:0;
