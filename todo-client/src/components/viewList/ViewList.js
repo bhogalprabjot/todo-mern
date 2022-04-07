@@ -156,7 +156,7 @@ const ViewList = () => {
     return (
         <div className='ViewList'>
             <div className='taskList-top-btns'>
-                <a href='/' className='backBtn' onClick={save}><MdKeyboardBackspace /></a>
+                <a href='/home' className='backBtn' onClick={save}><MdKeyboardBackspace /></a>
                 <div className='saveBtn' onClick={save}>Save</div>
             </div>
             <div className='title'>
