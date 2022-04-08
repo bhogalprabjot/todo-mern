@@ -1,7 +1,6 @@
 .grid{
     width: 100%;
     margin: 10px;
-    /* background-color: #e3c5f7; */
 
 }
 .homeGrid{
@@ -20,7 +19,7 @@
 
     background-color: #9214e6;
 
-/*     background-color: var(--color-accent); */
+    /* background-color: var(--color-accent); */
 
     transition: 250ms;
 }
