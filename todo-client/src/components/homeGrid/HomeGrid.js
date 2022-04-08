@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { shallowEqual,useSelector, useDispatch } from 'react-redux';
 import { getLists } from '../../actions/lists';
 import { connect } from 'react-redux';
 import './HomeGrid.css';
@@ -12,7 +12,7 @@ import { deleteList } from '../../actions/lists';
 const HomeGrid = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const lists = useSelector((state) => state.lists);
+    const lists = useSelector(((state) => state.lists));
 
     const viewList = (id) => {
         navigate(`/list/${id}`)
@@ -21,7 +21,7 @@ const HomeGrid = () => {
     // useEffect(() => {
     //     console.log("this is in home");
     //     dispatch(getLists());
-    // }, []);
+    // }, [dispatch]);
 
     
     const removeList = (listId) => {
