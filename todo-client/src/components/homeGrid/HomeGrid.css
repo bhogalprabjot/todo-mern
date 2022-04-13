@@ -5,7 +5,11 @@
 }
 .homeGrid{
     /* background-color: transparent; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    border: 2px solid rgb(32 32 32);
+    /* border-bottom: 2px solid rgb(32 32 32); */
+
+
     border-radius: 10px;
     margin:10px;
     padding: 0px 10px;
@@ -17,7 +21,7 @@
 }
 .homeGrid:hover{
 
-    background-color: #9214e6;
+    background-color: rgba(146,20,230,0.5);
 
     /* background-color: var(--color-accent); */
 
@@ -25,7 +29,7 @@
 }
 .deleteBtn{
     cursor: pointer;
-    color: maroon;
+    color: rgb(255, 0, 0);
 }
 
 .homeGrid__title{

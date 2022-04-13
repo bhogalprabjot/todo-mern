@@ -4,7 +4,8 @@
     margin-right:10%;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: white;
+    color: white;
+    /* background-color: white; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,9 +16,11 @@
 .taskList-item-complete{
     cursor: pointer;
     margin-top: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border: 2px solid rgb(32 32 32);
+    /* border-bottom: 2px solid rgb(32 32 32); */
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +31,7 @@
     position: absolute;
     top:50%;
     left: 10;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     width: 90%;
 }
 .taskList-top-btns{
@@ -36,17 +39,18 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 }
 .backBtn{
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 50px;
+    /* color: rgba(146,20,230); */
 }
 
 .saveBtn{
     cursor: pointer;
-    background-color: green;
+    background-color: rgba(146,20,230);
     padding: 10px;
     border-radius: 10px;
     margin-left: 15px;
@@ -74,8 +78,19 @@
 .titleText{
     width: 95%;
     font-size: 40px;
+    color:white;
+    background-color: transparent;
 }
 
+.titleTextInput{
+    width: 95%;
+    font-size: 40px;
+    color:white;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: transparent;
+
+}
 
 
 
@@ -86,11 +101,17 @@
     align-items: center;
 }
 .taskText{
+    color:white;
     width: 95%;
     font-size: 20px;
     background-color: transparent;
     border: 1px solid black;
+    padding: 10px;
+    /* border-top: 2px solid rgb(32 32 32);
+    border-bottom: 2px solid rgb(32 32 32); */
 }
+
+
 .viewList__addBtn{
     margin-left: 20px;
     font-size: 25px;
@@ -107,12 +128,13 @@
 .taskList-item{
     /* cursor: pointer; */
     margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 8px;
+    /* border-radius: 5px; */
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 2px solid rgb(32 32 32);
+    /* border-bottom: 2px solid rgb(32 32 32); */
 
     
 }

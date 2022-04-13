@@ -6,15 +6,17 @@ import './Home.css';
 
 import { RiAddCircleFill } from 'react-icons/ri';
 import { useLocation, useNavigate } from "react-router-dom";
-
+import LoadingSpinner from '../loadingSpinner/LoadingSpinner';
 
 
 const Home = () => {
     // const location = useLocation();
-    // const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile'))?.result);
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile'))?.result);
+    const isLoading = useSelector((state) => state.lists.isLoading);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    // console.log(user);
     useEffect(() => {
         console.log("this is in home");
         dispatch(getLists(JSON.parse(localStorage.getItem('profile'))?.result._id));
@@ -25,12 +27,13 @@ const Home = () => {
     }
 
     return (
-        <>
-            <div className='home'>
-                <HomeGrid />
-            </div>
-            <RiAddCircleFill className='addBtn' onClick={addNewList} />
-        </>
+        isLoading ? <LoadingSpinner /> :
+            <>
+                <div className='home'>
+                    <HomeGrid />
+                </div>
+                <RiAddCircleFill className='addBtn' onClick={addNewList} />
+            </>
     );
 };
 

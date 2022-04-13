@@ -1,19 +1,25 @@
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
     color: inherit;
-  }
-.header{
+}
 
-    background-color: #9214e6;
+.header {
 
-/*     background-color: var(--color-accent); */
+    /* background-color: #222831; */
+    background-color: rgb(32 32 32);
+    /*     background-color: var(--color-accent); */
 
     position: fixed;
     overflow: hidden;
-    top:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
-.nav{
+
+.nav {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -21,15 +27,26 @@ a, a:visited, a:hover, a:active {
 
 }
 
-.logo{
+.logo {
+    color: #9214e6;
     font-size: 1.5em;
-    color: black;
+    /* color: black; */
+    letter-spacing: 3px;
 }
 
-.nav-items{
+.nav-items {
     display: flex;
 }
-.nav-items div{
+
+.nav-items div {
+    letter-spacing: 3px;
+    /* color: #9214e6; */
+    color: white;
+    font-size: 0.8em;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.line {
+    color: #9214e6;
 }

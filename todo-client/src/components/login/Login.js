@@ -3,9 +3,10 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { GoogleLogin } from 'react-google-login';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../actions/auth';
+import LoadingSpinner from '../loadingSpinner/LoadingSpinner';
 const Login = () => {
 
     const [showPass, setShowPass] = useState(false);
@@ -18,19 +19,21 @@ const Login = () => {
         }
     )
 
+    const isLoading = useSelector((state) => state.lists.isLoading);
+
     const handleChange = (event) => {
         // if (event.target.name == 'email')
         //     setUser({ ...user, email: event.target.value });
         // else
         //     setUser({ ...user, password: event.target.value });
-        setUser({...user, [event.target.name]:event.target.value});
+        setUser({ ...user, [event.target.name]: event.target.value });
         console.log(user)
     }
 
     const handleSubmit = () => {
         // diaspatch({ type: 'LOGIN', data: { user } });
         // navigate('/');
-
+        // setIsLoading(true);
         diaspatch(login(user, navigate));
 
         // console.log(user);
@@ -44,31 +47,32 @@ const Login = () => {
 
     console.log("This is login");
     return (
-        <div className='login'>
-            <div className='login__title'>
-                <h1>Log In</h1>
-            </div>
-            <div className='login__form'>
-                <div className='login__form__ip'>
-                    <input type="text" name='email' placeholder='Email' value={user.email} onChange={handleChange} />
+        isLoading ? <LoadingSpinner /> :
+            <div className='login'>
+                <div className='login__title'>
+                    <h1>Log In</h1>
                 </div>
-                {
-                    showPass ?
-                        <div className='login__form__ip'>
-                            <input type="text" name='password' placeholder='Password' value={user.password} onChange={handleChange} />
-                        </div> :
-                        <div className='login__form__ip'>
-                            <input type="password" name='password' placeholder='Password' value={user.password} onChange={handleChange} />
-                        </div>
-                }
-                <div className='login__form__sp'>
-                    <input type='checkbox' value={showPass} onChange={() => setShowPass(!showPass)} /><span>Show Password</span>
-                </div>
-                <div className='login__btns'>
-                    <div className='login__btns__ip' onClick={handleSubmit}>
-                        <span>Login</span>
+                <div className='login__form'>
+                    <div className='login__form__ip'>
+                        <input type="text" name='email' placeholder='Email' value={user.email} onChange={handleChange} />
                     </div>
-                    {/* <GoogleLogin
+                    {
+                        showPass ?
+                            <div className='login__form__ip'>
+                                <input type="text" name='password' placeholder='Password' value={user.password} onChange={handleChange} />
+                            </div> :
+                            <div className='login__form__ip'>
+                                <input type="password" name='password' placeholder='Password' value={user.password} onChange={handleChange} />
+                            </div>
+                    }
+                    <div className='login__form__sp'>
+                        <input type='checkbox' value={showPass} onChange={() => setShowPass(!showPass)} /><span>Show Password</span>
+                    </div>
+                    <div className='login__btns'>
+                        <div className='login__btns__ip' onClick={handleSubmit} disabled={isLoading}>
+                            <span>Login</span>
+                        </div>
+                        {/* <GoogleLogin
                         clientId='GOOGLEID'
                         render={(renderProps) => (
                             <div className='login__btns__ip' onClick={renderProps.onClick} disabaled={renderProps.disabled}>
@@ -80,12 +84,12 @@ const Login = () => {
                         onFailure={googleFailure}
                         cookiePolicy='single_host_origin'
                     /> */}
+                    </div>
+                    <Link to='/signup'>
+                        <div className='login__link'>New here?</div >
+                    </Link>
                 </div>
-                <Link to='/signup'>
-                    <div className='login__link'>New here?</div >
-                </Link>
             </div>
-        </div>
     );
 };
 

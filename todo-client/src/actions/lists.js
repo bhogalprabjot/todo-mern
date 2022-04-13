@@ -5,9 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 // console.log("this is action", userID);
 export const getLists = (userID) => async (dispatch) => {
     try {
+        dispatch({type: 'START_LOADING'});
         const { data } = await api.fetchLists(userID);
         console.log("this is action creator", data)
         dispatch({ type: "FETCH_ALL", payload: data });
+        dispatch({type: 'END_LOADING'});
 
     } catch (err) {
         console.log(err.message);

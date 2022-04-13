@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { shallowEqual,useSelector, useDispatch } from 'react-redux';
+import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import { getLists } from '../../actions/lists';
 import { connect } from 'react-redux';
 import './HomeGrid.css';
@@ -12,7 +12,10 @@ import { deleteList } from '../../actions/lists';
 const HomeGrid = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const lists = useSelector(((state) => state.lists));
+    const s = useSelector((state) => state);
+    const lists = useSelector(((state) => state.lists.lists));
+    // const [lists, setLists] = useState();
+    console.log(s);
 
     const viewList = (id) => {
         navigate(`/list/${id}`)
@@ -20,12 +23,13 @@ const HomeGrid = () => {
 
     // useEffect(() => {
     //     console.log("this is in home");
-    //     dispatch(getLists());
-    // }, [dispatch]);
+    //     dispatch(getLists(JSON.parse(localStorage.getItem('profile'))?.result._id));
+    // }, []);
 
-    
+
     const removeList = (listId) => {
-        dispatch(deleteList(listId))
+        dispatch(deleteList(listId));
+        dispatch(getLists(JSON.parse(localStorage.getItem('profile'))?.result._id));
         // addList([...lists.filter(list => list.id!=listId)]);
         console.log("delete list", listId);
     }
